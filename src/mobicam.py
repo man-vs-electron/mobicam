@@ -88,7 +88,7 @@ for pin in [RED_LED_PIN, GREEN_LED_PIN, YELLOW_LED_PIN]:
     GPIO.output(pin,GPIO.LOW)
 GPIO.output(GREEN_LED_PIN, GPIO.HIGH)
 
-_callbacks = importlib.import_module(sys.argv[1] if len(sys.argv)>1 and "-"!=sys.argv[1] else "mve.mobicam.default_callbacks")
+_callbacks = importlib.import_module(sys.argv[1] if len(sys.argv)>1 and "-"!=sys.argv[1] else "default_callbacks")
 _state = mobicam_state()
 _callbacks.init(_state)
 
